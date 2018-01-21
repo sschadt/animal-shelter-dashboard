@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Animal Shelter Location Analysis - Austin, TX - Home</title>
+  <!--<link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="css/style.css">  
+</head>
+
+<body>
+    <section id="wrapper-viz">
+        <!-- Nav bar -->
+        <header>
+            <!-- <div class="nav-wrapper"> -->
+            <div class="logo">
+                <a href="/">Home</a>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Plots</button>
+                <div class="dropdown-content">
+                    <a href="visualizations/heatmap_all.html">Heatmap: All animals</a>
+                    <a href="visualizations/heatmap_dogs.html">Heatmap: Dogs</a>
+                    <a href="visualizations/heatmap_cats.html">Heatmap: Cats</a>
+                    <a href="visualizations/scatter1.html">Scatter: Dogs &amp; Cats (large)</a>
+                    <a href="visualizations/scatter2.html">Scatter: Dogs &amp; Cats (zoomed)</a>
+                    <a href="visualizations/intakes.html">Intake count vs. # of vets in area"</a>
+                </div>
+            </div>
+            <!-- </div> -->
+        </header>
+
+        <main>
+            <div class="home-content">
+                <h2>Animal Shelter Analysis in Austin</h2>
+                <img src="images/nyc-dogs.jpg" />
+                <h3>Data visualization of pet intakes at local animal shelters.</h3>
+                <p>I worked with a group on Animal Shelter data analysis for Austin, TX and Louisville, KY.
+                    The Austin dataset we obtained from AustinTexas.gov included specific addresses of pet intakes. My
+                    role in the project was to analyze the locations of these intakes, to identify trends around:
+                    <ul>
+                        <li>Animal types most frequently taken in by geographical area</li>
+                        <li>Difference between strays vs. animals in homes</li>
+                        <li>The effect of the proximity of veterinary services to the frequency of intakes</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="vizbox-container">
+                <h2>Visualizations</h2> 
+                <div class="vizbox">          
+                    <div class="viz">            
+                        <a href="visualizations/heatmap_all.html"><img src="images/heatmap_all_animals_1.jpg" alt="Google Maps heatmap: All animals"></a>
+                    </div>
+                    <div class="viz">           
+                        <a href="visualizations/heatmap_dogs.html"><img src="images/heatmap_animals_dogs_1.jpg" alt="Google Maps heatmap: Dogs"></a>
+                    </div>
+                    <div class="viz">               
+                        <a href="visualizations/heatmap_cats.html"><img src="images/heatmap_animals_cats_1.jpg" alt="Google Maps heatmap: Cats"></a>
+                    </div>      
+                    <div class="viz">  
+                        <a href="visualizations/scatter1.html"><img src="images/scatter_dogs_cats_1.jpg" alt="Google scatter map of dogs and cats in Austin"></a>
+                    </div>         
+                    <div class="viz"> 
+                        <a href="visualizations/scatter2.html"><img src="images/scatter_dogs_cats_2 (mid).jpg" alt="Google scatter map of dogs and cats in Austin"></a>
+                    </div>
+                    <div class="viz">    
+                        <a href="visualizations/intakes.html"><img src="images/scatter_vet_count.jpg" alt="Intake count vs. Vet count by geographical radius"></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+/* *** Dropdown *** */
+.dropbtn {
+    background-color: rgb(174, 201, 175);
+    padding: 20px 0px 20px 0;
+    font-weight: bold;
+    border: none;
+    width: 8em;
+    font-size: .8em;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #b3dbdb;
+}
+/* *** End Dropdown *** */
+
+#wrapper-viz {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#wrapper-viz > header {
+    padding: 0 8px;
+    display: grid;
+    grid-template-columns: 7fr 1fr 1fr 1fr;
+    width: 100%;
+    background-color: rgb(225, 238, 236);
+    margin: 0 1em 0 .5em;
+    border: 2px outset gainsboro;
+}
+
+#wrapper-viz > header > .logo {
+    align-self: center;
+    font-weight: bold;
+}
+
+#wrapper-viz > header > .logo a, #wrapper-viz > header > .logo a:visited {
+    text-decoration: none;
+    color:rgb(60, 84, 110);
+}
+
+#wrapper-viz > header > .logo a:hover {
+    color: gray;
+}
+
+#wrapper-viz > header > .dropdown {
+    align-self: right;
+}
+
+#wrapper-viz > header > .link {
+    background-color: rgb(174, 201, 175);
+    padding: 16px;
+    font-weight: bold;
+}
+
+#wrapper-viz > header > .link > a, #wrapper-viz > header > .link > a:visited {
+    color: black;
+}
+
+#wrapper-viz > header > .link:hover {
+    background-color: #b3dbdb;
+}
+
+#wrapper-viz > main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#wrapper-viz > header > .link > a {
+    text-decoration: none;
+}
+
+#wrapper-viz > main.comparisons {
+    display: grid;
+    grid-template-columns: 830px;
+}
+
+#wrapper-viz > main > .home-content > h2, #wrapper-viz > main > .vizbox-container > h2 {
+    color: teal;
+}
+
+#wrapper-viz > main > .vizbox-container {
+    grid-column: 4;
+    grid-row: 2 / 4; 
+    -ms-grid-column: 4;
+    -ms-grid-row: 2 / 4;
+    background-color:#F5F5F5;
+    padding: 4px 14px 14px 14px;
+    margin: 1em 1em 0 .3em;
+    border: 2px outset gainsboro;
+}
+
+#wrapper-viz > main.comparisons > .vizbox-container {
+    background-color:#F5F5F5;
+    padding: 4px 14px 14px 14px;
+    margin: 1em 1em 0 .3em;
+    border: 2px outset gainsboro;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#wrapper-viz  main  .vizbox-container  .vizbox { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+
+#wrapper-viz > main > .vizbox-container > .vizbox > .viz {
+    border: 1px solid #000000;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+}
+
+#wrapper-viz > main > .vizbox-container > .vizbox > .viz img {
+    width: 180px;
+    padding: 4px;
+}
+
+#wrapper-viz > main > .vizbox-container > .vizbox > .viz:hover {
+    border: .1em outset teal;
+    cursor: pointer;
+}
+
+#wrapper-viz > main > .vizbox-container > .vizbox > .selected, #wrapper-viz > main > .vizbox-container > .vizbox > .selected:hover {
+    border: 3px solid teal;
+}
+
+#wrapper-viz > main > .home-content {
+    padding: 0 14px;
+    grid-column: 1 / 3;
+    grid-row: 2 / 7;  
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+    background-color:#F5F5F5;
+    margin: 1em 1em 0 .5em;
+    border: 2px outset gainsboro;
+}
+
+#wrapper-viz > main > .home-content > img {
+    /* max-width: 100%;
+    max-height: 100%;
+    */
+    width: 98%;
+}
+
+/* Media queries */
+@media only screen and (max-width: 800px) {
+    #wrapper-viz > main {
+        display: block;
+    }
+    #wrapper-viz > main.comparisons {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #wrapper-viz > main > .home-content {
+        background-color:rgb(215, 248, 250);
+        display: inherit;
+    }
+    #wrapper-viz > main > .vizbox-container {
+        background-color:rgb(215, 248, 250);
+    }
+}
+@media only screen and (max-width: 550px) {
+    #wrapper-viz  main  .vizbox-container  .vizbox { 
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+/* End media queries */

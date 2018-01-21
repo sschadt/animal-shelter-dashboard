@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Animal Shelter Location Analysis - Austin, TX - Home</title>
+  <!--<link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="../css/style.css">  
+</head>
+
+<body>
+    <section id="wrapper-viz">
+        <!-- Nav bar -->
+        <header>
+            <!-- <div class="nav-wrapper"> -->
+            <div class="logo">
+                <a href="/">Home</a>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Plots</button>
+                <div class="dropdown-content">
+                    <a href="../visualizations/heatmap_all.html">Heatmap: All animals</a>
+                    <a href="../visualizations/heatmap_dogs.html">Heatmap: Dogs</a>
+                    <a href="../visualizations/heatmap_cats.html">Heatmap: Cats</a>
+                    <a href="../visualizations/scatter1.html">Scatter: Dogs &amp; Cats (large)</a>
+                    <a href="../visualizations/scatter2.html">Scatter: Dogs &amp; Cats (zoomed)</a>
+                    <a href="../visualizations/intakes.html">Intake count vs. # of vets in area"</a>
+                </div>
+            </div>
+            <!-- </div> -->
+        </header>
+
+        <main>
+            <div class="home-content">
+                <h2>Google Maps geocoding analysis: Intake count vs. Vet count by geographical radius</h2>
+                <img src="../images/scatter_vet_count.jpg" alt="Intake count vs. Vet count by geographical radius">
+                <p>We created a scatter plot of the number of intake addresses within a 1,700 meter radius of all veterinary clinics in Austin.
+                </p>
+                <strong>Key Findings</strong>
+                <ul>
+                    <li>In areas with lowest vet count, the frequency of intakes was highest.</li>
+                    <li>As vet count increased (up to a certain point), intake frequency decreased. </li>
+                </ul>
+                <strong>Other Findings</strong> 
+                <ul>
+                    <li>
+                        In areas with a higher concentration of vet clinics, the number of intakes increased again.
+                        (This could imply a higher concentration of animals in more densely-populated areas.)
+                    </li>
+                    <li>
+                        In the area with the highest concentration of vet clinics, there was a very low intake count. (More affluent area?)
+                    </li>
+                </ul>                       
+            </div>
+
+            <div class="vizbox-container">
+                <h2>Visualizations</h2> 
+                <div class="vizbox">          
+                    <div class="viz">            
+                        <a href="../visualizations/heatmap_all.html"><img src="../images/heatmap_all_animals_1.jpg" alt="Google Maps heatmap: All animals"></a>
+                    </div>
+                    <div class="viz">           
+                        <a href="../visualizations/heatmap_dogs.html"><img src="../images/heatmap_animals_dogs_1.jpg" alt="Google Maps heatmap: Dogs"></a>
+                    </div>
+                    <div class="viz">               
+                        <a href="../visualizations/heatmap_cats.html"><img src="../images/heatmap_animals_cats_1.jpg" alt="Google Maps heatmap: Cats"></a>
+                    </div>      
+                    <div class="viz">  
+                        <a href="../visualizations/scatter1.html"><img src="../images/scatter_dogs_cats_1.jpg" alt="Google scatter map of dogs and cats in Austin"></a>
+                    </div>         
+                    <div class="viz"> 
+                        <a href="../visualizations/scatter2.html"><img src="../images/scatter_dogs_cats_2 (mid).jpg" alt="Google scatter map of dogs and cats in Austin"></a>
+                    </div>
+                    <div class="viz selected">    
+                        <a href="../visualizations/intakes.html"><img src="../images/scatter_vet_count.jpg" alt="Intake count vs. Vet count by geographical radius"></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+</body>
+
+</html>
