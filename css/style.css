@@ -56,9 +56,10 @@
 #wrapper-viz > header {
     display: grid;
     grid-template-columns: 7fr 1fr 1fr 1fr;
-    width: 98.4%;
+    width: 98.1%;
     background-color: rgb(225, 238, 236);
     border: 2px outset gainsboro;
+    margin-left: .3em;
 }
 
 #wrapper-viz > header > .logo {
