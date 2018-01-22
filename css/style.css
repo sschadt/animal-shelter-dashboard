@@ -180,11 +180,13 @@
 
 #wrapper-viz > main > .vizbox-container > .vizbox > .viz:hover {
     border: .1em outset teal;
+    margin: .45em .4em .5em .5em;
     cursor: pointer;
 }
 
 #wrapper-viz > main > .vizbox-container > .vizbox > .selected, #wrapper-viz > main > .vizbox-container > .vizbox > .selected:hover {
     border: 3px solid teal;
+    margin: .45em .4em .5em .5em;
 }
 
 #wrapper-viz > main > .home-content {
