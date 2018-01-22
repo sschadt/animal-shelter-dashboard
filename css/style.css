@@ -1,15 +1,16 @@
 /* *** Dropdown *** */
-.dropbtn {
-    background-color: rgb(174, 201, 175);
+#wrapper-viz .dropbtn {
+    background-color: #F5F5F5; /* rgb(174, 201, 175); */
     padding: 20px 0px 20px 0;
     font-weight: bold;
     border: none;
-    width: 8em;
+    width: 9.8em;
     font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Dropdown Content (Hidden by Default) */
-.dropdown-content {
+#wrapper-viz .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -19,23 +20,27 @@
 }
 
 /* Links inside the dropdown */
-.dropdown-content a {
+#wrapper-viz .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
+#wrapper-viz .dropdown {
+    border: 1px solid gainsboro;    
+}
+
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+#wrapper-viz .dropdown-content a:hover {background-color: #f1f1f1}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+#wrapper-viz .dropdown:hover .dropdown-content {
     display: block;
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
+#wrapper-viz .dropdown:hover .dropbtn {
     background-color: #b3dbdb;
 }
 /* *** End Dropdown *** */
@@ -44,22 +49,22 @@
     display: flex;
     flex-direction: column;
     align-items:flex-start;
+    justify-content: left;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #wrapper-viz > header {
-    padding: 0 8px;
     display: grid;
     grid-template-columns: 7fr 1fr 1fr 1fr;
-    width: 100%;
+    width: 98.4%;
     background-color: rgb(225, 238, 236);
-    margin: 0 1em 0 .5em;
     border: 2px outset gainsboro;
 }
 
 #wrapper-viz > header > .logo {
     align-self: center;
     font-weight: bold;
+    padding-left: .7em;
 }
 
 #wrapper-viz > header > .logo a, #wrapper-viz > header > .logo a:visited {
@@ -76,14 +81,15 @@
 }
 
 #wrapper-viz > header > .link {
-    background-color: rgb(174, 201, 175);
-    padding: 16px;
+    background-color: #F5F5F5; /* #d9deda;  rgb(174, 201, 175); */
+    padding: 20px 16px 16px 16px;
     font-weight: bold;
     text-align: center;
+    border: 1px solid gainsboro;
 }
 
 #wrapper-viz > header > .link-right {
-    padding: 16px 20px 16px 5px; 
+    padding: 20px 20px 16px 5px; 
 }
 
 #wrapper-viz > header > .link > a, #wrapper-viz > header > .link > a:visited {
@@ -91,7 +97,7 @@
 }
 
 #wrapper-viz > header > .link:hover {
-    background-color: #b3dbdb;
+    background-color: #c2dedc; /* #b3dbdb; */
 }
 
 #wrapper-viz > main {
@@ -132,11 +138,32 @@
     grid-column: 1;
 }
 
-#wrapper-viz  main  .vizbox-container  .vizbox { 
+#wrapper-viz  main .vizbox-container .vizbox {
     display: grid;
     grid-template-columns: 1fr 1fr;
     -ms-grid-columns: 1fr 1fr;
     grid-gap: 5px;
+}
+
+#wrapper-viz main .vizbox-container table {
+    border: 1px solid gainsboro;
+}
+
+#wrapper-viz main .vizbox-container table tr { 
+    font-size: .75em;
+    background: #FFF;
+}
+
+#wrapper-viz main .vizbox-container table th { 
+    background: #FFF;
+}
+
+#wrapper-viz main .vizbox-container table tr:nth-child(odd) {
+    background: #F5F5F5;
+}
+
+#wrapper-viz main .vizbox-container table tr:nth-child(even) {
+    background: #FFF;
 }
 
 #wrapper-viz > main > .vizbox-container > .vizbox > .viz {
