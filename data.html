@@ -13,10 +13,14 @@
         <!-- Nav bar -->
         <header>
             <div class="logo">
-                <a href="index.html">Home</a>
+                <div class="home"><a href="index.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a></div>
+                <div class="description"><span class="name">Stephen Schadt | </span>Project Demo</span></div>
             </div>
             <div class="dropdown">
-                <button class="dropbtn">Plots</button>
+                <button class="dropbtn">
+                    <span class="text">Plots<i class="fa fa-chart-line" aria-hidden="true"></i></span>
+                    <i class="fa fa-chart-line fa-2x" aria-hidden="true"></i>
+                </button>
                 <div class="dropdown-content">
                     <a href="visualizations/heatmap_all.html">Heatmap: All animals</a>
                     <a href="visualizations/heatmap_dogs.html">Heatmap: Dogs</a>
@@ -26,8 +30,18 @@
                     <a href="visualizations/intakes.html">Intake count vs. # of vets in area</a>
                 </div>
             </div>
-            <div class="link"><a href="comparisons.html">Comparisons</a></div>
-            <div class="link link-right"><a href="data.html">Data</a></div>
+            <div class="link">
+                <a href="comparisons.html">
+                    <span class="text">Comparisons<i class="fa fa-bars" aria-hidden="true"></i></span>
+                    <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="link link-right selected">
+                <a href="data.html">
+                    <span class="text">Data<i class="fa fa-table" aria-hidden="true"></i></span>
+                    <i class="fa fa-table fa-2x" aria-hidden="true"></i>
+                </a>
+            </div>
         </header>
 
         <main>

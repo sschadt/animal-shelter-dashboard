@@ -1,12 +1,15 @@
+@import "fontawesome-all.min.css"; 
+
 /* *** Dropdown *** */
 #wrapper-viz .dropbtn {
     background-color: #F5F5F5; /* rgb(174, 201, 175); */
     padding: 20px 0px 20px 0;
     font-weight: bold;
     border: none;
-    width: 9.8em;
+    width: 11em;
     font-size: 1em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-width: 13em;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -41,7 +44,7 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 #wrapper-viz .dropdown:hover .dropbtn {
-    background-color: #b3dbdb;
+    background-color:#c2dedc;
 }
 /* *** End Dropdown *** */
 
@@ -55,7 +58,7 @@
 
 #wrapper-viz > header {
     display: grid;
-    grid-template-columns: 7fr 1fr 1fr 1fr;
+    grid-template-columns: 7fr 2fr 2fr 2fr;
     width: 98.1%;
     background-color: rgb(225, 238, 236);
     border: 2px outset gainsboro;
@@ -66,6 +69,8 @@
     align-self: center;
     font-weight: bold;
     padding-left: .7em;
+    display: grid;
+    grid-template-columns: 1fr 7fr;
 }
 
 #wrapper-viz > header > .logo a, #wrapper-viz > header > .logo a:visited {
@@ -87,18 +92,25 @@
     font-weight: bold;
     text-align: center;
     border: 1px solid gainsboro;
+    min-width: 10em;
+}
+
+#wrapper-viz header .dropbtn i, #wrapper-viz header .link i {
+    padding-left: 1em;
 }
 
 #wrapper-viz > header > .link-right {
-    padding: 20px 20px 16px 5px; 
+    padding: 20px 20px 16px 16px; 
 }
 
 #wrapper-viz > header > .link > a, #wrapper-viz > header > .link > a:visited {
     color: black;
 }
 
-#wrapper-viz > header > .link:hover {
-    background-color: #c2dedc; /* #b3dbdb; */
+#wrapper-viz > header > .link:hover, 
+#wrapper-viz > header > .link.selected, 
+#wrapper-viz .dropdown .dropbtn.selected {
+    background-color: #c2dedc; 
 }
 
 #wrapper-viz > main {
@@ -205,7 +217,77 @@
     width: 75%;
 }
 
+/* Hide large size font-awesome menu icons on large screens */
+.dropdown .fa-2x, .link .fa-2x { display: none; }
+
+#wrapper-viz > header > .logo > .description {
+    padding-top: 2px;
+    font-size: 1.1em;
+    font-weight: normal;
+    line-height: 1.3em;
+}
+
+#wrapper-viz > header > .logo > .description .name {
+    font-size: 1.3em;
+    font-weight: 450;
+    color: #046161;
+}
+
 /* Media queries */
+@media only screen and (min-width: 1400px) {
+    #wrapper-viz .dropdown .dropbtn {
+        min-width: 18em;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #wrapper-viz > header {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-flow: column;
+        grid-template-areas: 
+            "head head head"
+            "nav1 nav2 nav3";
+    }
+    #wrapper-viz > header > .logo {
+        grid-area: head;
+        line-height: 3em;
+        max-width: 29em;
+    }
+
+    #wrapper-viz > header > .logo > .description {
+        line-height: unset;
+    }
+
+    #wrapper-viz > header > .logo > .home {
+        padding-top: 9px;
+    }
+ 
+    #wrapper-viz > header > .dropdown {
+        font-size: .8em;
+        grid-area: nav1;
+    }
+
+    #wrapper-viz .dropdown .dropbtn {
+        width: 100%;
+        min-width: unset;
+    }
+
+    #wrapper-viz .dropdown-content {
+        top: 9.7em;
+    }
+   
+    #wrapper-viz > header > .link {
+        grid-area: nav2;
+        min-width: unset;
+        font-size: .8em;
+        line-height: 1.4em;
+    }
+
+    #wrapper-viz > header > .link-right {
+        grid-area: nav3;
+    }
+}
+
 @media only screen and (max-width: 800px) {
     #wrapper-viz > main {
         display: block;
@@ -215,17 +297,30 @@
         grid-template-columns: 1fr;
     }
     #wrapper-viz > main > .home-content {
-        background-color:rgb(215, 248, 250);
+        background-color:rgb(225, 238, 236);
         display: inherit;
     }
     #wrapper-viz > main > .vizbox-container {
-        background-color:rgb(215, 248, 250);
+        background-color:rgb(225, 238, 236);
     }
 }
 @media only screen and (max-width: 550px) {
+    #wrapper-viz > header > .logo > .description .name {
+        font-size: 1.2em;
+    }
     #wrapper-viz  main  .vizbox-container  .vizbox { 
         display: grid;
         grid-template-columns: 1fr;
     }
+
+    #wrapper-viz header .text {
+        display: none;
+    }
+
+    .dropdown .fa-2x, .link .fa-2x { display: inline; }
+
+    #wrapper-viz header .dropbtn i, #wrapper-viz header .link i {
+        padding-left: 0;
+    }  
 }
 /* End media queries */
