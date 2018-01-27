@@ -63,14 +63,26 @@
     background-color: rgb(225, 238, 236);
     border: 2px outset gainsboro;
     margin-left: .3em;
+    align-content: flex-start ;
 }
 
 #wrapper-viz > header > .logo {
+    padding-top:1em;     /* IE compatibility */   
+    padding-bottom: 1em; /* IE compatibility */   
     align-self: center;
     font-weight: bold;
     padding-left: .7em;
     display: grid;
     grid-template-columns: 1fr 7fr;
+    float: left; /* IE compatibility */   
+}
+
+#wrapper-viz > header > .logo .home, #wrapper-viz > header > .logo .description {      
+    float: left; /* IE compatibility */   
+}
+
+#wrapper-viz > header > .logo .description {      
+    padding: 5px 15px 0 15px;
 }
 
 #wrapper-viz > header > .logo a, #wrapper-viz > header > .logo a:visited {
@@ -84,6 +96,7 @@
 
 #wrapper-viz > header > .dropdown {
     align-self: right;
+    display: inline-block; /* IE compatibility */   
 }
 
 #wrapper-viz > header > .link {
@@ -93,6 +106,7 @@
     text-align: center;
     border: 1px solid gainsboro;
     min-width: 10em;
+    display: inline-block; /* IE compatibility */   
 }
 
 #wrapper-viz header .dropbtn i, #wrapper-viz header .link i {
@@ -101,6 +115,7 @@
 
 #wrapper-viz > header > .link-right {
     padding: 20px 20px 16px 16px; 
+    display: inline-block; /* IE compatibility */   
 }
 
 #wrapper-viz > header > .link > a, #wrapper-viz > header > .link > a:visited {
@@ -202,6 +217,7 @@
 }
 
 #wrapper-viz > main > .home-content {
+    display: inline-block; /* IE compatibility */   
     padding: 0 14px;
     grid-column: 1 / 3;
     grid-row: 2 / 7;  
@@ -215,6 +231,7 @@
 
 #wrapper-viz > main > .home-content > img {
     width: 75%;
+    height: 75%; /* IE compatibility */   
 }
 
 /* Hide large size font-awesome menu icons on large screens */
@@ -252,6 +269,7 @@
         grid-area: head;
         line-height: 3em;
         max-width: 29em;
+        min-width: 20em;
     }
 
     #wrapper-viz > header > .logo > .description {
