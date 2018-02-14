@@ -230,8 +230,8 @@
 }
 
 #wrapper-viz > main > .home-content > img {
-    width: 75%;
-    height: 75%; /* IE compatibility */   
+    max-width: 100%;
+    align-self: left;
 }
 
 /* Hide large size font-awesome menu icons on large screens */
